@@ -26,7 +26,7 @@ body{
     color: #fd951fcc;
 }
 
-.dropzone{
+.dropzones{
     padding: 16px;
     /* background: gray; */
     min-width: 282px;
