@@ -62,10 +62,25 @@ body{
     background: #af1111;
 }
 
+.status.yellow{
+    background: #9deb0e;
+}
+
 .highlight{
     background-color: #11af1155;
+    /* background-color: #fd951f08; */
 }
 
 .cards, .dropzones{
     transition: 400ms;
+}
+
+.is-dragging{
+    cursor: move;
+    opacity: 0.3;
+}
+
+.over{
+    background-color: #4cd137;
+    /* background-color: #4cd13711; */
 }
