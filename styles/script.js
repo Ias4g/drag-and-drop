@@ -38,7 +38,7 @@ function dragstart(){
 }
 
 function drag(){
-    // log('CARD: Is dragging...')
+    // log('CARD: Is dragging...') 
 }
 
 function dragend(){
@@ -71,7 +71,7 @@ function dragover(){
     // this = dropzone
     this.classList.add('over')
 
-    // get gragging card
+    // get dragging card
     const cardBeingDragged = document.querySelector('.is-dragging')
 
     // this dropzone
