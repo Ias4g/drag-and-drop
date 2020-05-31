@@ -62,4 +62,10 @@ body{
     background: #af1111;
 }
 
-/* PAREI NA ALTURA DOS 20 MINUTOS */
+.highlight{
+    background-color: #11af1155;
+}
+
+.cards, .dropzones{
+    transition: 400ms;
+}
