@@ -18,6 +18,9 @@ function log(message){
 // Taking and placing all existing cards into <const cards>
 const cards = document.querySelectorAll('.cards')
 
+// Taking and placing all existing dropzones into <const dropzones>
+const dropzones = document.querySelectorAll('.dropzones')
+
 // Our cards
 cards.forEach(card => {
     card.addEventListener('dragstart', dragstart) // Adding dragstart event to cards
@@ -28,6 +31,10 @@ cards.forEach(card => {
 //Adding functionality to the dragstart event when cards are being dragged.
 function dragstart(){
     // log('CARD: Start dragging...')
+    dropzones.forEach(dropzone => dropzone.classList.add('highlight'))
+
+    // this = card
+    this.classList.add('is-dragging')
 }
 
 function drag(){
@@ -36,6 +43,10 @@ function drag(){
 
 function dragend(){
     // log('CARD: Stop drag!!')
+    dropzones.forEach(dropzone => dropzone.classList.remove('highlight'))
+
+    // tis = card
+    this.classList.remove('is-dragging')
 }
 
 /**
@@ -44,8 +55,6 @@ function dragend(){
  * -----------------------------------------------------------------------
  */
 
-// Taking and placing all existing dropzones into <const dropzones>
-const dropzones = document.querySelectorAll('.dropzones')
 dropzones.forEach(dropzone => {
     dropzone.addEventListener('dragover', dragover)
     dropzone.addEventListener('dragenter', dragenter)
@@ -59,12 +68,23 @@ function dragenter(){
 
 function dragover(){
     // log('DROPZONE: Over')
+    // this = dropzone
+    this.classList.add('over')
+
+    // get gragging card
+    const cardBeingDragged = document.querySelector('.is-dragging')
+
+    // this dropzone
+    this.appendChild(cardBeingDragged)
 }
 
 function dragleave(){
     // log('DROPZONE: Leave')
+    // this = dropzone
+    this.classList.remove('over')
 }
 
 function drop(){
     // log('DROPZONE: Dropped')
+    this.classList.remove('over')
 }
