@@ -44,6 +44,10 @@ body{
     font-size: 18px;
 }
 
+.cards:hover{
+    cursor: move;
+}
+
 .status{
     width: 30px;
     height: 8px;
@@ -67,8 +71,8 @@ body{
 }
 
 .highlight{
-    background-color: #11af1155;
-    /* background-color: #fd951f08; */
+    /* background-color: #11af1155; */
+    background-color: #fd951f08;
 }
 
 .cards, .dropzones{
@@ -77,10 +81,10 @@ body{
 
 .is-dragging{
     cursor: move;
-    opacity: 0.3;
+    opacity: 0.4;
 }
 
 .over{
-    background-color: #4cd137;
-    /* background-color: #4cd13711; */
+    /* background-color: #4cd137; */
+    background-color: #4cd13711;
 }
